@@ -1,0 +1,68 @@
+### Get all employees
+GET http://localhost:8000/api/employees
+Accept: application/json
+
+###
+
+### Get employee by ID
+GET http://localhost:8000/api/employees/1
+Accept: application/json
+
+###
+
+### Create employee
+POST http://localhost:8000/api/employees
+Content-Type: application/json
+
+{
+  "employeCode": "EMP004",
+  "firstName": "Kiran",
+  "lastName": "Kumar",
+  "email": "shiva123@gmail.com",
+  "phoneNumber": "9876543212",
+  "salary": 50000,
+  "password": "Admin@123",
+  "department": {
+    "departmentId": 2
+  }
+}
+
+###
+
+### Update employee
+PUT http://localhost:8000/api/employees/1
+Content-Type: application/json
+
+{
+  "employeCode": "EMP001",
+  "firstName": "Shiva",
+  "lastName": "Kumar sm",
+  "email": "shiva@gmail.com",
+  "phoneNumber": "9876543210",
+  "salary": 50000,
+  "department": {
+    "departmentId": 1
+  }
+}
+
+###
+
+### Delete employee
+DELETE http://localhost:8000/api/employees/1
+Accept: application/json
+
+###
+
+### Create employee - Validation Test
+POST http://localhost:8000/api/employees
+Content-Type: application/json
+
+{
+  "firstName": "",
+  "lastName": "",
+  "email": "abc",
+  "phoneNumber": "",
+  "salary": -1000,
+  "designation": "",
+  "departmentId": null
+}

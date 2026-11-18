@@ -1,0 +1,63 @@
+####################################
+# CHECK IN
+####################################
+
+### Employee 1 Check In
+POST http://localhost:8000/api/attendance/check-in/7
+
+###
+
+### Employee 2 Check In
+POST http://localhost:8000/api/attendance/check-in/2
+
+###
+
+
+####################################
+# CHECK OUT
+####################################
+
+### Employee 1 Check Out
+POST http://localhost:8000/api/attendance/check-out/7
+
+###
+
+### Employee 2 Check Out
+POST http://localhost:8000/api/attendance/check-out/2
+
+###
+
+
+####################################
+# GET ALL ATTENDANCE
+####################################
+
+GET http://localhost:8000/api/attendance
+Accept: application/json
+
+###
+
+
+####################################
+# GET ATTENDANCE BY ID
+####################################
+
+GET http://localhost:8000/api/attendance/1
+Accept: application/json
+
+###
+
+
+####################################
+# GET ATTENDANCE BY EMPLOYEE
+####################################
+
+GET http://localhost:8000/api/attendance/employee/1
+Accept: application/json
+
+###
+
+GET http://localhost:8000/api/attendance/employee/2
+Accept: application/json
+
+###

@@ -1,0 +1,19 @@
+
+### Get all departments
+GET http://localhost:8000/api/departments
+Accept: application/json
+
+###
+### Get department by ID
+GET http://localhost:8000/api/departments/1
+Accept: application/json
+
+###
+### Create a department
+POST http://localhost:8000/api/departments
+Content-Type: application/json
+
+{
+  "departmentName": "Marketing",
+  "location": "Pune"
+}

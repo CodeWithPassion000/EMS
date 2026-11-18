@@ -1,0 +1,135 @@
+########################################
+# LEAVE BALANCE APIS
+########################################
+
+### Create Leave Balance for Employee 1
+POST http://localhost:8000/api/leave-balances/7
+Accept: application/json
+
+###
+
+### Create Leave Balance for Employee 2
+POST http://localhost:8000/api/leave-balances/2
+Accept: application/json
+
+###
+
+### Get Leave Balance By Employee Id
+GET http://localhost:8000/api/leave-balances/1
+Accept: application/json
+
+###
+
+### Get Leave Balance By Employee Id
+GET http://localhost:8000/api/leave-balances/2
+Accept: application/json
+
+###
+
+### Get All Leave Balances
+GET http://localhost:8000/api/leave-balances
+Accept: application/json
+
+###
+
+
+
+########################################
+# LEAVE REQUEST APIS
+########################################
+
+### Apply Casual Leave
+POST http://localhost:8000/api/leaves
+Content-Type: application/json
+
+{
+  "employee": {
+    "employeeId": 7
+  },
+  "leaveType": "CASUAL",
+  "startDate": "2026-11-20",
+  "endDate": "2026-11-22",
+  "reason": "Family Function"
+}
+
+###
+
+### Apply Sick Leave
+POST http://localhost:8000/api/leaves
+Content-Type: application/json
+
+{
+  "employee": {
+    "employeeId": 1
+  },
+  "leaveType": "SICK",
+  "startDate": "2026-11-25",
+  "endDate": "2026-11-26",
+  "reason": "Fever and Medical Rest"
+}
+
+###
+
+### Apply Earned Leave
+POST http://localhost:8000/api/leaves
+Content-Type: application/json
+
+{
+  "employee": {
+    "employeeId": 2
+  },
+  "leaveType": "EARNED",
+  "startDate": "2026-12-01",
+  "endDate": "2026-12-05",
+  "reason": "Vacation Trip"
+}
+
+###
+
+### Get All Leave Requests
+GET http://localhost:8000/api/leaves
+Accept: application/json
+
+###
+
+### Get Leave Request By Id
+GET http://localhost:8000/api/leaves/1
+Accept: application/json
+
+###
+
+### Get Leave Request By Id
+GET http://localhost:8000/api/leaves/2
+Accept: application/json
+
+###
+
+### Get Leaves By Employee
+GET http://localhost:8000/api/leaves/employee/1
+Accept: application/json
+
+###
+
+### Get Leaves By Employee
+GET http://localhost:8000/api/leaves/employee/2
+Accept: application/json
+
+###
+
+### Approve Leave Request
+PUT http://localhost:8000/api/leaves/1/approve?approvedBy=ADMIN
+Accept: application/json
+
+###
+
+### Approve Leave Request
+PUT http://localhost:8000/api/leaves/2/approve?approvedBy=HR_MANAGER
+Accept: application/json
+
+###
+
+### Reject Leave Request
+PUT http://localhost:8000/api/leaves/1/reject
+Accept: application/json
+
+###
