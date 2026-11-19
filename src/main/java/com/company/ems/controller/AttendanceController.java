@@ -1,5 +1,6 @@
 package com.company.ems.controller;
 
+import com.company.ems.dto.AttendanceSummaryDto;
 import com.company.ems.entity.Attendance;
 import com.company.ems.service.AttendanceService;
 import org.springframework.http.ResponseEntity;
@@ -45,5 +46,16 @@ public class AttendanceController {
     public ResponseEntity<List<Attendance>> getAttendanceByEmployee(@PathVariable Long employeeId) {
 
         return ResponseEntity.ok(attendanceService.getAttendanceByEmployee(employeeId));
+    }
+
+    @GetMapping( "/employee/{employeeId}/monthly")
+    public  ResponseEntity<List<Attendance>> getMonthlyAttendance(@PathVariable Long employeeId,@RequestParam int month,@RequestParam int year){
+       return ResponseEntity.ok(attendanceService.getMonthlyAttedance(employeeId, month, year));
+    }
+
+    @GetMapping("/summary/{employeeId}")
+    public ResponseEntity<AttendanceSummaryDto>     getSummary(@PathVariable Long employeeId){
+
+        return ResponseEntity.ok(attendanceService.getAttendanceSummary(employeeId));
     }
 }
