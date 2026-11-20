@@ -1,0 +1,39 @@
+####################################
+# GENERATE PAYROLL
+####################################
+
+POST http://localhost:8000/api/payroll/generate?employeeId=7&month=11&year=2026
+
+###
+
+POST http://localhost:8000/api/payroll/generate?employeeId=2&month=11&year=2026
+
+###
+
+####################################
+# GET ALL PAYROLLS
+####################################
+
+GET http://localhost:8000/api/payroll
+
+###
+
+####################################
+# GET PAYROLL BY ID
+####################################
+
+GET http://localhost:8000/api/payroll/1
+
+###
+
+####################################
+# GET PAYROLL BY EMPLOYEE
+####################################
+
+GET http://localhost:8000/api/payroll/employee/7
+
+###
+
+GET http://localhost:8000/api/payroll/employee/2
+
+###
