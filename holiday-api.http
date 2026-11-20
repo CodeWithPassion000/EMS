@@ -1,0 +1,26 @@
+### Create Holiday
+POST http://localhost:8000/api/holidays
+Content-Type: application/json
+
+{
+  "holidayName": "Republic Day",
+  "holidayDate": "2027-01-26",
+  "holidayType": "NATIONAL"
+}
+
+###
+
+### Get All Holidays
+GET http://localhost:8000/api/holidays
+
+###
+
+### Get Holiday By Id
+GET http://localhost:8000/api/holidays/1
+
+###
+
+### Delete Holiday
+DELETE http://localhost:8000/api/holidays/1
+
+###
