@@ -1,0 +1,33 @@
+### Apply WFH
+POST http://localhost:8000/api/wfh
+Content-Type: application/json
+
+{
+  "employee": {
+    "employeeId": 7
+  },
+  "requestDate": "2026-11-25",
+  "reason": "Internet issue at office location"
+}
+
+###
+
+### Get All WFH Requests
+GET http://localhost:8000/api/wfh
+
+###
+
+### Get Employee WFH Requests
+GET http://localhost:8000/api/wfh/employee/7
+
+###
+
+### Approve WFH
+PUT http://localhost:8000/api/wfh/1/approve?approvedBy=Manager
+
+###
+
+### Reject WFH
+PUT http://localhost:8000/api/wfh/1/reject
+
+###
