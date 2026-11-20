@@ -1,0 +1,63 @@
+###################################
+# UPLOAD DOCUMENT
+###################################
+
+POST http://localhost:8000/api/documents
+Content-Type: application/json
+
+{
+  "employee": {
+    "employeeId": 7
+  },
+  "documentName": "Shiva PAN Card",
+  "documentType": "PAN",
+  "filePath": "C:/documents/pan.pdf"
+}
+
+###
+
+POST http://localhost:8000/api/documents
+Content-Type: application/json
+
+{
+  "employee": {
+    "employeeId": 2
+  },
+  "documentName": "Shiva Aadhar",
+  "documentType": "AADHAR",
+  "filePath": "C:/documents/aadhar.pdf"
+}
+
+###
+
+###################################
+# GET ALL DOCUMENTS
+###################################
+
+GET http://localhost:8000/api/documents
+
+###
+
+###################################
+# GET DOCUMENT BY ID
+###################################
+
+GET http://localhost:8000/api/documents/1
+
+###
+
+###################################
+# GET DOCUMENTS BY EMPLOYEE
+###################################
+
+GET http://localhost:8000/api/documents/employee/7
+
+###
+
+###################################
+# DELETE DOCUMENT
+###################################
+
+DELETE http://localhost:8000/api/documents/1
+
+###
